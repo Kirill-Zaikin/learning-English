@@ -1,0 +1,34 @@
+{% extends "base_page.html" %}
+
+{% block page_title %}
+Практика перевода
+{% endblock %}
+
+{% block page_lead %}
+Здесь вам предлагается прочитать и перевести несколько предложенных текстов. Если у вас возникли проблемы с переводом - рядом с текстом приведен перевод.
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="text-table">
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3">#</th>
+              <th scope="col" class="py-3">Текст</th>
+              <th scope="col" class="py-3">Перевод</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cnt, text, definition in texts %}
+            <tr>
+                <td class="py-3">{{ cnt }}</td>
+                <td class="py-3">{{ text }}</td>
+                <td class="py-3">{{ definition }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+{% endblock %}
