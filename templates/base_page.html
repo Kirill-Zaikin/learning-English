@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <title>{% block pagetitle %}Привет, Мир!{% endblock %}</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Подключение Bootstrap CSS для стилизации страницы -->
     <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
-
 </head>
 <body>
 <main>
     <div class="container">
-        <!-- Шапка -->
+        <!-- Шапка сайта, включает логотип и название проекта -->
         <header class="border-bottom my-4">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <div class="fs-2 mb-3 d-flex align-items-center gap-2">
@@ -25,15 +24,16 @@
         <!-- Заголовок страницы -->
         <div class="p-5 mb-4 bg-light rounded-3" id="title-box">
             <div class="container-fluid py-5">
+                <!-- Блок с главным заголовком страницы -->
                 <h1 class="display-1 fw-bold">{% block page_title %}{% endblock %}</h1>
                 <p class="col-md-8 fs-4">{% block page_lead %}{% endblock %}</p>
             </div>
         </div>
 
-        <!-- Основное содержимое -->
+        <!-- Основное содержимое страницы -->
         {% block content %}{% endblock %}
 
-        <!-- Подвал -->
+        <!-- Подвал сайта с авторскими правами -->
         <footer class="footer pt-3 mt-4 text-muted border-top">
             © 2025
         </footer>

@@ -1,53 +1,52 @@
-{% extends "base_page.html" %}
+{% extends "base_page.html" %} <!-- Этот шаблон расширяет базовую страницу, наследуя общую структуру (например, шапку, подвал) -->
 
 {% block page_title %}
-Тест
+Тест <!-- Заголовок страницы, который будет отображаться в браузере -->
 {% endblock %}
 
 {% block page_lead %}
-Попробуйте свои силы на практике!
+Попробуйте свои силы на практике! <!-- Подзаголовок, который даёт пользователю описание, что он может делать на этой странице -->
 {% endblock %}
 
-
 {% block content %}
-    {% if score is not None %}
+    {% if score is not None %} <!-- Проверка, если у пользователя есть результат (оценка) -->
         <div class="result py-3">
-            <h3 class="text-center">Ваша оценка: {{ score|floatformat:2 }}%</h3> <!-- Оценка в процентах с двумя знаками после запятой -->
+            <h3 class="text-center">Ваша оценка: {{ score|floatformat:2 }}%</h3> <!-- Показываем оценку в процентах с двумя знаками после запятой -->
         </div>
-        <div class="table-responsive">
+        <div class="table-responsive"> <!-- Создаём таблицу для отображения результатов каждого вопроса -->
             <table class="table table-striped table-sm">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Текст</th>
-                        <th>Ваш ответ</th>
-                        <th>Правильный ответ</th>
+                        <th>#</th> <!-- Номер вопроса -->
+                        <th>Текст</th> <!-- Текст вопроса -->
+                        <th>Ваш ответ</th> <!-- Ответ пользователя -->
+                        <th>Правильный ответ</th> <!-- Правильный ответ -->
                     </tr>
                 </thead>
                 <tbody>
-                    {% for cnt, text, user_input, correct, is_correct in submitted_data %}
-                        <tr class="{% if is_correct %}table-success{% else %}table-danger{% endif %}">
-                            <td>{{ cnt }}</td>
-                            <td>{{ text }}</td>
-                            <td>{{ user_input }}</td>
-                            <td>{{ correct }}</td>
+                    {% for cnt, text, user_input, correct, is_correct in submitted_data %} <!-- Цикл для перебора всех вопросов с результатами -->
+                        <tr class="{% if is_correct %}table-success{% else %}table-danger{% endif %}"> <!-- Цвет строки в зависимости от правильности ответа -->
+                            <td>{{ cnt }}</td> <!-- Номер вопроса -->
+                            <td>{{ text }}</td> <!-- Текст вопроса -->
+                            <td>{{ user_input }}</td> <!-- Ответ пользователя -->
+                            <td>{{ correct }}</td> <!-- Правильный ответ -->
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
         </div>
-    {% else %}
-        <form method="post">
-            {% csrf_token %}
+    {% else %} <!-- Если у пользователя нет результата (то есть тест ещё не сдан) -->
+        <form method="post"> <!-- Форма для прохождения теста -->
+            {% csrf_token %} <!-- Токен защиты от CSRF атак -->
             <div class="container px-4 py-5">
-                <h4>Ответьте на вопросы, введя страну по тексту:</h4>
-                {% for cnt, text, correct in tests %}
+                <h4>Ответьте на вопросы, введя страну по тексту (ответ введите на русском языке):</h4>
+                {% for cnt, text, correct in tests %} <!-- Цикл для отображения всех вопросов теста -->
                     <div class="mb-4">
-                        <p><strong>{{ text }}</strong></p>
-                        <input type="text" name="user_input_{{ cnt }}" class="form-control" placeholder="Введите страну..." />
+                        <p><strong>{{ text }}</strong></p> <!-- Вопрос -->
+                        <input type="text" name="user_input_{{ cnt }}" class="form-control" placeholder="Введите страну..." /> <!-- Поле ввода для ответа пользователя -->
                     </div>
                 {% endfor %}
-                <button type="submit" class="btn btn-primary">Отправить</button>
+                <button type="submit" class="btn btn-primary">Отправить</button> <!-- Кнопка отправки формы -->
             </div>
         </form>
     {% endif %}

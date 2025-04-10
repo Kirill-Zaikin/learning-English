@@ -1,30 +1,31 @@
-{% extends "base_page.html" %}
+{% extends "base_page.html" %} <!-- Этот шаблон расширяет базовую страницу, используя общую структуру (шапка, подвал) -->
 
 {% block page_title %}
-Практика перевода
+Практика перевода <!-- Заголовок страницы, который будет отображаться в браузере -->
 {% endblock %}
 
 {% block page_lead %}
-Здесь вам предлагается прочитать и перевести несколько предложенных текстов. Если у вас возникли проблемы с переводом - рядом с текстом приведен перевод.
+Здесь вам предлагается прочитать и перевести несколько предложенных текстов. Если у вас возникли проблемы с переводом - рядом с текстом приведен перевод. <!-- Подзаголовок, объясняющий цель страницы и помогая пользователю понять, что ему предстоит сделать -->
 {% endblock %}
 
 {% block content %}
 <div class="container px-4 py-5" id="text-table">
-    <div class="table-responsive">
-        <table class="table table-striped table-sm">
+    <div class="table-responsive"> <!-- Создаём контейнер для таблицы с прокруткой (если таблица будет слишком большой) -->
+        <table class="table table-striped table-sm"> <!-- Создаём таблицу с полосками и маленькими ячейками -->
           <thead>
             <tr>
-              <th scope="col" class="py-3">#</th>
-              <th scope="col" class="py-3">Текст</th>
-              <th scope="col" class="py-3">Перевод</th>
+              <th scope="col" class="py-3">#</th> <!-- Номер текста -->
+              <th scope="col" class="py-3">Текст</th> <!-- Оригинальный текст -->
+              <th scope="col" class="py-3">Перевод</th> <!-- Перевод текста -->
             </tr>
           </thead>
           <tbody>
-            {% for cnt, text, definition in texts %}
+            {% for cnt, text, definition in texts %} <!-- Цикл, перебирающий список текстов, где:
+                                                      cnt - номер текста, text - сам текст, definition - перевод текста -->
             <tr>
-                <td class="py-3">{{ cnt }}</td>
-                <td class="py-3">{{ text }}</td>
-                <td class="py-3">{{ definition }}</td>
+                <td class="py-3">{{ cnt }}</td> <!-- Номер текста -->
+                <td class="py-3">{{ text }}</td> <!-- Оригинальный текст -->
+                <td class="py-3">{{ definition }}</td> <!-- Перевод текста -->
             </tr>
             {% endfor %}
           </tbody>
