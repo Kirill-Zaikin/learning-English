@@ -1,7 +1,12 @@
 {% extends "base_page.html" %}
 
+{% load static %}
+
 {% block page_title %}
-Добавить слово
+    <div class="d-flex align-items-center">
+        <img src="{% static 'form.svg' %}" alt="Добавить слово" width="100" height="100" class="me-2">
+        Добавить слово
+    </div>
 {% endblock %}
 
 {% block page_lead %}

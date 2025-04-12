@@ -1,36 +1,36 @@
 term;explanation;source
-country;страна;db
-capital;столица;db
-culture;культура;db
-history;история;db
-tradition;традиция;db
-architecture;архитектура;db
-museum;музей;db
-landmark;достопримечательность;db
-castle;замок;db
-nature;природа;db
-mountains;горы;db
-forest;лес;db
-lake;озеро;db
-cuisine;кухня;db
-wine;вино;db
-cheese;сыр;db
-sausage;сосиска;db
-beer;пиво;db
-borscht;борщ;db
-pelmeni;пельмени;db
-car;автомобиль;db
-brand;бренд;db
-engineering;инженерия;db
-innovation;инновация;db
-education;образование;db
-university;университет;db
-travel;путешествие;db
-experience;опыт;db
-hospitality;гостеприимство;db
-modern;современный;db
-traditional;традиционный;db
-contrast;контраст;db
-unforgettable;незабываемый;db
-famous;известный;db
-beautiful;красивый;db
+country;страна, государство, Родина;db
+capital;столица, главный город;db
+culture;культура, традиции, обычаи;db
+history;история, прошлое, летопись;db
+tradition;традиция, обычай, ритуал;db
+architecture;архитектура, зодчество;db
+museum;музей, выставочный центр, галерея;db
+landmark;достопримечательность, памятник, ориентирант;db
+castle;замок, крепость;db
+nature;природа, окружающая среда;db
+mountains;горы, возвышенности;db
+forest;лес, древесный массив;db
+lake;озеро, водоём;db
+cuisine;кухня, кулинария;db
+wine;вино, напиток;db
+cheese;сыр, молочный продукт;db
+sausage;сосиска, колбаса;db
+beer;пиво, напиток;db
+borscht;борщ, суп из свёклы;db
+pelmeni;пельмени, мясные клёцки;db
+car;автомобиль, машина;db
+brand;бренд, марка, торговая марка;db
+engineering;инженерия, техника, машиностроение;db
+innovation;инновация, новшество;db
+education;образование, обучение;db
+university;университет, высшее учебное заведение;db
+travel;путешествие, поездка, туризм;db
+experience;опыт, переживание, знание;db
+hospitality;гостеприимство, радушие, дружелюбие;db
+modern;современный, актуальный, новейший;db
+traditional;традиционный, обычный;db
+contrast;контраст, различие, отличие;db
+unforgettable;незабываемый, памятный, уникальный;db
+famous;известный, знаменитый, прославленный;db
+beautiful;красивый, привлекательный, прекрасный;db

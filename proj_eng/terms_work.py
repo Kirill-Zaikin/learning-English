@@ -116,4 +116,4 @@ def get_terms_stats():
         "words_min": min(defin_len)
     }
     
-    return 
+    return  stats

@@ -1,7 +1,12 @@
 {% extends "base_page.html" %}
 
+{% load static %}
+
 {% block page_title %}
-Статистика словаря
+    <div class="d-flex align-items-center">
+        <img src="{% static 'stat.svg' %}" alt="Статистика словаря" width="100" height="100" class="me-2">
+        Статистика словарая
+    </div>
 {% endblock %}
 
 {% block page_lead %}
@@ -14,7 +19,7 @@
     
     <!-- Раздел для отображения общего количества терминов -->
     <div>
-        <h3 class="py-2">Количество терминов</h3>
+        <h3 class="py-2">Количество слов</h3>
     </div>
     <div class="row text-center">
         <!-- Блок с количеством всех терминов -->

@@ -1,7 +1,12 @@
 {% extends "base_page.html" %} <!-- Этот шаблон расширяет базовую страницу, используя общую структуру (шапка, подвал) -->
 
+{% load static %}
+
 {% block page_title %}
-Практика перевода <!-- Заголовок страницы, который будет отображаться в браузере -->
+    <div class="d-flex align-items-center">
+        <img src="{% static 'text.svg' %}" alt="Практика перевода" width="180" height="180" class="me-2">
+        Практика перевода
+    </div>
 {% endblock %}
 
 {% block page_lead %}
@@ -14,7 +19,7 @@
         <table class="table table-striped table-sm"> <!-- Создаём таблицу с полосками и маленькими ячейками -->
           <thead>
             <tr>
-              <th scope="col" class="py-3">#</th> <!-- Номер текста -->
+              <th scope="col" class="py-3"></th> <!-- Номер текста -->
               <th scope="col" class="py-3">Текст</th> <!-- Оригинальный текст -->
               <th scope="col" class="py-3">Перевод</th> <!-- Перевод текста -->
             </tr>
