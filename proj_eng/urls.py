@@ -1,18 +1,27 @@
-"""proj_maths URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+URL-конфигурация для проекта `proj_maths`.
+
+Этот модуль содержит маршруты URL, которые связывают запросы с соответствующими представлениями (views) приложения.
+
+Каждый путь (URL) соответствует определенному представлению, которое выполняет соответствующую логику обработки запроса.
+
+Маршруты:
+- `''` (home): Главная страница сайта.
+- `'terms-list/'`: Страница для отображения списка терминов.
+- `'add-term/'`: Страница для добавления нового термина.
+- `'send-term/'`: Страница для отправки термина.
+- `'stats/'`: Страница для отображения статистики.
+- `'texts-list/'`: Страница для отображения списка текстов.
+- `'test-input/'`: Страница для ввода тестовых данных.
+
+Функции:
+- `path()`: Связывает URL с соответствующим представлением.
+- `static()`: Обрабатывает статические файлы.
+
+Для более подробной информации о маршрутизации в Django, см. документацию:
+https://docs.djangoproject.com/en/4.1/topics/http/urls/
+"""
+
 from django.contrib import admin
 from django.urls import path
 from django.conf import settings
